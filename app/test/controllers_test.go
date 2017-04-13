@@ -6,9 +6,9 @@ import (
     "testing"
 
     "github.com/labstack/echo"
-    //"fmt"
-    //. "github.com/smartystreets/goconvey/convey"
+    . "github.com/smartystreets/goconvey/convey"
 
+    "fmt"
 )
 
 var (
@@ -17,12 +17,12 @@ var (
     rec = httptest.NewRecorder()
 )
 func TestIndex(t *testing.T) {
-    //c := e.NewContext(req, rec)
-    //c.SetPath("/")
-    //Index(c)
-    //fmt.Println(rec.Body.String())
-    //
-    //Convey("index print", t, func() {
-    //    So("Hello, World!", ShouldEqual, rec.Body.String())
-    //})
+    c := e.NewContext(req, rec)
+    c.SetPath("/")
+    Index(c)
+    fmt.Println(rec.Body.String())
+
+    Convey("index print", t, func() {
+        So("Hello, World!", ShouldEqual, rec.Body.String())
+    })
 }
