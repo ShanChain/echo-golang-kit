@@ -4,7 +4,7 @@ test:
 	@echo "test each package"
 	go test -cover ./app/...
 
-collect-cover-data:
+coverage-data:
 	@echo "-----collect-cover-data-----"
 	@echo "mode: set" > coverage-all.out
 	$(foreach pkg, $(PACKAGES),\

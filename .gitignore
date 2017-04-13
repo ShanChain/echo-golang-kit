@@ -26,3 +26,6 @@ _testmain.go
 *.prof
 
 .idea/
+coverage.out
+coverage-all.out
+coverage.html
